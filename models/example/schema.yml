@@ -10,7 +10,7 @@ models:
             tests:
                 - unique
     - name: my_model
-               
+
 
     #- name: my_second_dbt_model
     #  description: "A starter dbt model"
@@ -59,3 +59,15 @@ sources:
     schema: tpch_sf001
     tables:
       - name: customer
+
+      your_profile_name:
+  target: dev
+  outputs:
+    dev:
+      type: mysql5
+      server: 172.18.0.11
+      port: 3306
+      schema: capella_acs
+      username: root
+      password: Capella@20!4
+      ssl_disabled: True
